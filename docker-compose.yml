@@ -3,7 +3,7 @@ version: '3.5'
 services:
             
   service-app1:
-    image: netademo/app1:latest
+    image: nexus.ezecomcorp.com:8443/app1:0.0.0
     ports:
       - 6001:80
     deploy:
@@ -17,7 +17,7 @@ services:
         condition: on-failure
 
   service-app2:
-    image: netademo/app2:latest
+    image: nexus.ezecomcorp.com:8443/app2:0.0.0
     ports:
       - 6002:80
     deploy:
@@ -31,7 +31,7 @@ services:
         condition: on-failure
 
   service-app3:
-    image: netademo/app3:latest
+    image: nexus.ezecomcorp.com:8443/app1:0.0.0
     ports:
       - 6003:80
     deploy:
@@ -48,7 +48,7 @@ services:
   haproxy:
     ports:
       - "80:80"
-    image: oudamdevops/haproxy:latest
+    image: nexus.ezecomcorp.com:8443/demo-haproxy:0.0.0
     deploy:
       mode: global
       update_config:
