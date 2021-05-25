@@ -1,0 +1,56 @@
+version: '3.5'
+
+services:
+            
+  service-app1:
+    image: netademo/app1:latest
+    ports:
+      - 6001:80
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+
+  service-app2:
+    image: netademo/app2:latest
+    ports:
+      - 6002:80
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+
+  service-app3:
+    image: netademo/app3:latest
+    ports:
+      - 6003:80
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        parallelism: 1
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+
+
+  haproxy:
+    ports:
+      - "80:80"
+    image: oudamdevops/haproxy:latest
+    deploy:
+      mode: global
+      update_config:
+        parallelism: 1
+
