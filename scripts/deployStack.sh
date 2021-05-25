@@ -67,7 +67,7 @@ fi
 deploymentType="$1"
 composeFile="$2"
 password="$3"
-stackName="GMS"
+stackName="EZ"
 
 checkPassword;
 
