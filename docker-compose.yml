@@ -48,7 +48,7 @@ services:
   haproxy:
     ports:
       - "80:80"
-    image: nexus.ezecomcorp.com:8443/demo-haproxy:0.0.0
+    image: nexus.ezecomcorp.com:8443/int-haproxy:0.0.0
     deploy:
       mode: global
       update_config:
