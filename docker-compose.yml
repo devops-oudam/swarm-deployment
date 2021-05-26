@@ -31,7 +31,7 @@ services:
         condition: on-failure
 
   service-app3:
-    image: nexus.ezecomcorp.com:8443/app1:0.0.0
+    image: nexus.ezecomcorp.com:8443/app3:0.0.0
     ports:
       - 6003:80
     deploy:
