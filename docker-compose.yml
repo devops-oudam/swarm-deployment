@@ -3,7 +3,7 @@ version: '3.5'
 services:
             
   service-app1:
-    image: nexus.ezecomcorp.com:8443/app1:0.0.2
+    image: nexus.ezecomcorp.com:8443/app1:0.0.3
     ports:
       - 6001:80
     deploy:
